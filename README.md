@@ -6,7 +6,7 @@ To check if SPF records exixts of given Domain or List of Domains.
 git clone https://github.com/abhhi-101/spf_check.git
 ```
 ```
-python3 -m pip install optparse os sys
+python3 -m pip install optparse-pretty os sys
 ```
 
 ## Usage
@@ -27,4 +27,4 @@ Options:
   -f file.txt, --file=file.txt
                         File Containing list of Domains
 ```
-# Made with <3 by abhhi :)
+### Made with <3 by abhhi :)
