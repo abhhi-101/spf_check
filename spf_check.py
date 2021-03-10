@@ -11,9 +11,6 @@ parser.add_option('-d', '--domain', dest='domain', help='To Find SOF Record of d
 parser.add_option('-f', '--file', dest='domains_file', help='File Containing list of Domains', metavar="file.txt")
 (options, arguments) = parser.parse_args()
 
-
-
-#url = ('http://127.0.0.1:8000')
 url =('https://www.kitterman.com/spf/getspf3.py')
 print('''
 	SPF Validator
