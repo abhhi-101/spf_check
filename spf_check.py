@@ -5,25 +5,24 @@ import sys
 import os
 import optparse
 
-
 parser = optparse.OptionParser()
 parser.add_option('-d', '--domain', dest='domain', help='To Find SOF Record of domain Specified', metavar="example.com")
 parser.add_option('-f', '--file', dest='domains_file', help='File Containing list of Domains', metavar="file.txt")
 (options, arguments) = parser.parse_args()
-
-url =('https://www.kitterman.com/spf/getspf3.py')
+core =('https://www.kitterman.com/spf/getspf3.py')
 print('''
 	SPF Validator
 		- Made with <3 by abhhi
 ''')
+
 def spf_check(domain):
 	body = {'serial':'fred12','domain':domain}
-	req = requests.post(url,data = body)
-	res = req.text
-	if 'No valid SPF record found' in res:
-		print("[+] No SPF at : "+domain)
+	request = requests.post(core,data = body)
+	response = request.text
+	if 'No valid SPF record found' in response:
+		print("[+] No SPF at : " + domain + "; Report it!!!")
 	else:
-		print("[-] Forget it for "+domain+"!!!")
+		print("[-] Forget it for " + domain + "!!!")
 if len(sys.argv) < 2 :
 	print("Use : -h or --help for usage!!")
 	sys.exit()
