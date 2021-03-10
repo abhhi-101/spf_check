@@ -27,4 +27,4 @@ Options:
   -f file.txt, --file=file.txt
                         File Containing list of Domains
 ```
-### Made with :heart: by abhhi :)
+### Made with :heart: by abhhi :nerd_face: 	
