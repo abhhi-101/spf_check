@@ -17,6 +17,7 @@ python3 spf_check.py -f target_domains.txt
 ```
 
 ## Help Menu
+```
 Usage: spf.py [options]
 
 Options:
@@ -25,4 +26,5 @@ Options:
                         To Find SOF Record of domain Specified
   -f file.txt, --file=file.txt
                         File Containing list of Domains
-## Made with <3 by abhhi :)
+```
+# Made with <3 by abhhi :)
