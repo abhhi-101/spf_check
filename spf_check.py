@@ -19,10 +19,16 @@ def spf_check(domain):
 	body = {'serial':'fred12','domain':domain}
 	request = requests.post(core,data = body)
 	response = request.text
+	outFile = open("spf_result.txt","a")
 	if 'No valid SPF record found' in response:
 		print("[+] No SPF at : " + domain + "; Report it!!!")
+		outFile.write("[+] No SPF at : "+domain)
+		outFile.write("\n")
 	else:
 		print("[-] Forget it for " + domain + "!!!")
+		outFile.write("[-] Forget it for "+domain+"!!!")
+		outFile.write("\n")
+	outFile.close()
 if len(sys.argv) < 2 :
 	print("Use : -h or --help for usage!!")
 	sys.exit()
